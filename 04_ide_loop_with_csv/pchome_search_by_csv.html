@@ -1,0 +1,80 @@
+<tr>
+	<td>storeEval</td>
+	<td>Preferences.getString(&quot;testCaseDirectory&quot;)</td>
+	<td>testCaseDirectory</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{window.opener.resizeTo(1024,768);}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>readCSV</td>
+	<td>file://${testCaseDirectory}/keyword.csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>index = 1;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>index &lt;= 5;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>index</td>
+	<td>value</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>${value}</td>
+	<td>x</td>
+</tr>
+<tr>
+	<td>storeCellValue</td>
+	<td>testvalue</td>
+	<td>${x},1</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${testvalue}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>//*[@id=&quot;keyword&quot;]</td>
+	<td>${testvalue}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//*[@id=&quot;doSearch&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>captureEntirePageScreenshot</td>
+	<td>${testCaseDirectory}/${value}_${testvalue}.png</td>
+	<td></td>
+</tr>
+<tr>
+	<td>getEval</td>
+	<td>index++;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
